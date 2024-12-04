@@ -2,3 +2,5 @@ RABBIT_MQ:
   RMQ_USER: _____
   RMQ_PASS: _____
   RMQ_HOST: _____
+DOMAIN:
+  DOMAIN_NAME: blockx3.xyz
