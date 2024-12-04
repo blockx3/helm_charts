@@ -17,6 +17,7 @@ spec:
       containers:
         - name: website
           image: blockx3/private:website
+          imagePullPolicy: Always
           env:
             - name: RMQ_HOST
               valueFrom:
