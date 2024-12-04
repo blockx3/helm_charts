@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-deployment
+  labels:
+    app: website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: website
+          image: blockx3/private:website
+          env:
+            - name: RMQ_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: website-secret
+                  key: RMQ_HOST
+            - name: RMQ_USER
+              valueFrom:
+                secretKeyRef:
+                  name: website-secret
+                  key: RMQ_USER
+            - name: RMQ_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: website-secret
+                  key: RMQ_PASS
+          ports:
+            - containerPort: 3000

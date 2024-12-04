@@ -1,0 +1,4 @@
+RABBIT_MQ:
+  RMQ_USER: _____
+  RMQ_PASS: _____
+  RMQ_HOST: _____
