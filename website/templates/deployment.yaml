@@ -35,3 +35,5 @@ spec:
                   key: RMQ_PASS
           ports:
             - containerPort: 3000
+      imagePullSecrets:
+        - name: regcred
