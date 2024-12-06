@@ -14,7 +14,9 @@ Helm is a package manager for Kubernetes that helps you manage Kubernetes applic
 
 To use a Helm chart from this repository, `cd` into the project directory and run the following commands:
 
-1. Install the Helm chart:
+1. Change the required valuse in the `values.yaml` file.
+
+2. Install the Helm chart:
     ```sh
     helm install <any_name> ./
     ```
