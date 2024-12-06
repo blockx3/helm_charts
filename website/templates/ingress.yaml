@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: website-ingress
 spec:
-  ingressClassName: haproxy
+  ingressClassName: nginx
   rules:
     - host: {{.Values.DOMAIN.DOMAIN_NAME}}
       http:
